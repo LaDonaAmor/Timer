@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab">
+          <i class="fas fa-bell"></i>
+          <span>Alarm</span>
+        </button>
+        <button class="tab active">
+          <i class="fas fa-hourglass-half"></i>
+          <span>Timer</span>
+        </button>
+        <button class="tab">
+          <i class="fas fa-stopwatch"></i>
+          <span>Stopwatch</span>
+        </button>
+      </div>
+
+      <div class="timer-container">
+        <h1>Timer</h1>
+        <div class="time-inputs">
+          <input
+            type="number"
+            id="input-hours"
+            placeholder="HH"
+            min="0"
+            max="23"
+          />
+          <span>:</span>
+          <input
+            type="number"
+            id="input-minutes"
+            placeholder="MM"
+            min="0"
+            max="59"
+          />
+          <span>:</span>
+          <input
+            type="number"
+            id="input-seconds"
+            placeholder="SS"
+            min="0"
+            max="59"
+          />
+          <button id="set-time-btn">Set</button>
+        </div>
+
+        <div class="timer-circle">
+          <div class="time">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span
+              id="seconds"
+              >00</span
+            >
+          </div>
+          <svg class="progress-ring" width="300" height="300">
+            <circle
+              class="progress-ring__circle"
+              stroke-width="4"
+              fill="transparent"
+              r="110"
+              cx="180"
+              cy="180"
+            />
+          </svg>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn play">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="control-btn pause">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="control-btn stop">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(27, 136, 169);
+  color: white;
+}
+
+.container {
+  background: rgb(80, 212, 217);
+  backdrop-filter: blur(0.625rem);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 22rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  background: rgb(0, 170, 206);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.tab.active {
+  background: rgb(12, 155, 189);
+  opacity: 1;
+}
+
+.tab i {
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.tab span {
+  font-size: 0.7rem;
+  padding-top: 0.7rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.timer-container {
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.time-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0.2rem;
+}
+
+.time-inputs input {
+  width: 3.75rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.time-inputs button {
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.timer-circle {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: 300;
+  z-index: 1;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+  stroke: #fff;
+  transition: stroke-dashoffset 0.5s linear;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.fa-times {
+  color: red;
+}
+
+.control-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #00b4d8;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.control-btn:hover {
+  transform: scale(1.05);
+  background: white;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
